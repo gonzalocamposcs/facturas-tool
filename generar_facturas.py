@@ -262,11 +262,12 @@ def main():
                 return headers[n]
         return None
 
-    c_factura = col("factura")
-    c_fecha = col("fecha")
-    c_alumno = col("alumno")
-    c_nac = col("nacionalidad")
-    c_concepto = col("concepto")
+    c_factura = col("factura", "invoice")
+    c_fecha = col("fecha", "date")
+    c_alumno = col("alumno", "nombre/razón social", "nombre/razon social",
+                   "nombre", "student", "estudiante")
+    c_nac = col("nacionalidad", "nationality")
+    c_concepto = col("concepto", "concept", "concepts")
     c_importe = col("€", "importe", "amount")
 
     if not c_factura:
